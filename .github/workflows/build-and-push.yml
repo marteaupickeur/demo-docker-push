@@ -37,4 +37,4 @@ jobs:
         with:
           context: .
           push: true
-          tags: your_username/your_image_name:latest
+          tags: marteaupickeur/demo-docker-push:latest
