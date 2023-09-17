@@ -17,7 +17,8 @@ jobs:
         run: echo "version=$(grep -oP '<version>\K[^<]+' pom.xml)" >> $GITHUB_OUTPUT
 
       - name: Display extracted version
-        run: echo "Extracted version = ${{ steps.extract_version.outputs.version }}"
+        run: cat $GITHUB_OUTPUT
+
 
       - name: Set up JDK 17
         uses: actions/setup-java@v3
