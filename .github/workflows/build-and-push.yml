@@ -13,13 +13,12 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v3
 
+      - name: Extract version from pom.xml
+        run: echo "version=$(grep -oP '<version>\K[^<]+' pom.xml)" >> $GITHUB_ENV
 
+      - name: Display extracted version
+        run: echo "The output is ${{ env.version }}"
 
-      - name: Set output
-        run: echo "my_output=my_value" >> $GITHUB_ENV
-
-      - name: Use the output
-        run: echo "The output is ${{ env.my_output }}"
 
 
 
