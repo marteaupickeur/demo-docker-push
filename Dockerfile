@@ -5,7 +5,7 @@ FROM openjdk:17-alpine
 WORKDIR /app
 
 # Copy all the Spring Boot application JAR files into the container
-COPY ./target/demo-docker-push-0.0.1-SNAPSHOT.jar Api.jar
+COPY ./target/*.jar demo-docker-push.jar
 
 # Expose the port that your Spring Boot application will run on
 EXPOSE 8080
