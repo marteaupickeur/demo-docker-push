@@ -17,7 +17,7 @@ jobs:
         run: echo "version=$(grep -oP '<version>\K[^<]+' pom.xml | tr -d '[:space:]')" >> $GITHUB_OUTPUT
 
       - name: Display extracted version
-        run: echo "Version = $GITHUB_OUTPUT"
+        run: echo "The output is ${{ env.version }}"
 
 
       - name: Set up JDK 17
