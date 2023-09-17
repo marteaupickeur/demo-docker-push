@@ -11,4 +11,4 @@ COPY ./target/*.jar demo-docker-push.jar
 EXPOSE 8080
 
 # Define the command to run your Spring Boot application when the container starts
-CMD ["java", "-jar", "Api.jar"]
+CMD ["java", "-jar", "demo-docker-push.jar"]
